@@ -41,17 +41,19 @@ const AddComments = () => {
 			}
 			setCommentMap(
 				renderCommentList.map((singleComment) => (
-					<div class="comments">
-						<h5 class="card-title">
+					<div className="comments" key={singleComment}>
+						<h5 className="card-title">
 							{singleComment.name} <span>({singleComment.time})</span>
 						</h5>
-						<p class="card-text">{singleComment.comment}</p>
+						<p className="card-text">{singleComment.comment}</p>
 					</div>
 				))
 			);
 		}, 50);
 	}
-	updateComments();
+	setTimeout(() => {
+		updateComments();
+	}, 2000);
 	setTimeout(() => {
 		console.log("Reloading...");
 		window.location.reload();

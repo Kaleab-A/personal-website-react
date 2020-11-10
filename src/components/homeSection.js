@@ -16,7 +16,7 @@ class HomeSection extends Component {
 									<h1 className="title-main-text name" id="titleName">
 										I am -----
 									</h1>
-									<h1 class="nameTitle">{jsonData["name"]}</h1>
+									<h1 className="nameTitle">{jsonData["name"]}</h1>
 								</div>
 								<h4 className="subtitle-text text-uppercase" id="titleJob">
 									{jsonData["job"]}
